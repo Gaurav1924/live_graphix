@@ -37,6 +37,8 @@ live_graphix-*.tar
 npm-debug.log
 /assets/node_modules/
 
+.vscode
+
 # Ignore environment-specific config files
 /config/dev.exs
 /config/test.secret.exs
