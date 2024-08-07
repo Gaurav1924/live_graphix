@@ -1,0 +1,19 @@
+{
+  "name": "live_graphix",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "deploy": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "vue": "^3.4.36",
+    "vue-flow": "^0.2.0",
+    "@braks/vue-flow": "^0.4.41"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.0.0",
+    "typescript": "^4.0.0",
+    "vite": "^2.0.0"
+  }
+}
