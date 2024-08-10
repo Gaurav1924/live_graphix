@@ -61,7 +61,8 @@ defmodule LiveGraphix.MixProject do
       {:ash, "~> 2.0"},
       {:ash_postgres, "~> 1.0"},
       {:ash_authentication, "~> 3.0"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:picosat_elixir, "~> 0.2.0"}
     ]
   end
 

@@ -1,5 +1,5 @@
-defmodule LiveGraphixWeb.GraphLive do
-  use LiveGraphixWeb, :live_view
+defmodule LiveGraphixWeb.Live.GraphLive do
+  use Phoenix.LiveView
 
   alias LiveGraphix.Graph
   alias LiveGraphixWeb.FlowComponent
@@ -17,7 +17,7 @@ defmodule LiveGraphixWeb.GraphLive do
           <li><%= graph["name"] %>: <%= graph["nodes"] %> nodes, <%= graph["edges"] %> edges</li>
         <% end %>
       </ul>
-      <%= live_component @socket, FlowComponent, id: "flow" %>
+      <%= live_component FlowComponent, id: "flow" %>
     </div>
     """
   end

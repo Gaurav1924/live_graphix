@@ -1,0 +1,25 @@
+<div id="bill-of-material">
+  <!-- Vue component will be mounted here -->
+</div>
+
+<script type="module">
+  import { createApp } from 'vue';
+  import BillOfMaterial from '/assets/js/components/BillOfMaterial.vue';
+
+  const app = createApp(BillOfMaterial, {
+    items: [
+      { id: 1, name: 'Resistor', quantity: 100, description: 'A resistor is a passive electrical component that limits the flow of electrical current.' },
+      { id: 2, name: 'Capacitor', quantity: 50, description: 'A capacitor is a device that stores electrical energy in an electric field.' },
+      { id: 3, name: 'Inductor', quantity: 30, description: 'An inductor, also called a coil, is a passive component in electrical circuits.' },
+      { id: 4, name: 'Transistor', quantity: 75, description: 'A transistor is a semiconductor device used to amplify or switch electronic signals.' },
+      { id: 5, name: 'Diode', quantity: 120, description: 'A diode is a component that allows current to flow in one direction only.' },
+      { id: 6, name: 'Transformer', quantity: 10, description: 'A transformer is a static electrical device that transfers electrical energy between two or more circuits.' },
+      { id: 7, name: 'Integrated Circuit', quantity: 45, description: 'An integrated circuit is a set of electronic circuits on a small flat piece (or "chip") of semiconductor material.' },
+      { id: 8, name: 'Fuse', quantity: 25, description: 'A fuse is a safety device that protects an electrical circuit by breaking the connection if the current flow is too high.' },
+      { id: 9, name: 'Connector', quantity: 200, description: 'Connectors are used to join electrical circuits together.' },
+      { id: 10, name: 'Relay', quantity: 15, description: 'A relay is an electrically operated switch.' }
+    ]
+  });
+
+  app.mount('#bill-of-material');
+</script>
