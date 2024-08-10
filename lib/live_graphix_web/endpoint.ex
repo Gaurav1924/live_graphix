@@ -25,6 +25,8 @@ defmodule LiveGraphixWeb.Endpoint do
     gzip: false,
     only: LiveGraphixWeb.static_paths()
 
+  channel "graph:lobby", LiveGraphixWeb.GraphChannel
+
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
