@@ -1,9 +1,7 @@
 defmodule LiveGraphixWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :live_graphix
 
-  # The session will be stored in the cookie and signed,
-  # this means its contents can be read but not tampered with.
-  # Set :encryption_salt if you would also like to encrypt it.
+  # Session options and socket configuration
   @session_options [
     store: :cookie,
     key: "_live_graphix_key",
@@ -15,20 +13,19 @@ defmodule LiveGraphixWeb.Endpoint do
     websocket: [connect_info: [session: @session_options]],
     longpoll: [connect_info: [session: @session_options]]
 
-  # Serve at "/" the static files from "priv/static" directory.
-  #
-  # You should set gzip to true if you are running phx.digest
-  # when deploying your static files in production.
+  # Static file serving
   plug Plug.Static,
     at: "/",
     from: :live_graphix,
     gzip: false,
     only: LiveGraphixWeb.static_paths()
 
-  channel "graph:lobby", LiveGraphixWeb.GraphChannel
+  # Configure channels
+  socket "/socket", LiveGraphixWeb.UserSocket,
+    websocket: true,
+    longpoll: false
 
-  # Code reloading can be explicitly enabled under the
-  # :code_reloader configuration of your endpoint.
+  # Additional plugs for development
   if code_reloading? do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
